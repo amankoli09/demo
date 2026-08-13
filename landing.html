@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our App</title>
+    <style>
+        /* This is the CSS to make the page look modern and clean */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #7f8c8d;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        #secret-message {
+            margin-top: 20px;
+            color: #27ae60;
+            font-weight: bold;
+            display: none; /* Hidden by default */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- This is the HTML structure of your landing page -->
+    <div class="card">
+        <h1>Discover Something New</h1>
+        <p>Welcome to our amazing new project! We build modern tools to help you manage your code, collaborate with teams, and learn faster every day.</p>
+        <button class="btn" id="action-btn">Click For a Surprise</button>
+        <p id="secret-message">🎉 You are doing awesome! Good luck with your Git presentation! 🚀</p>
+    </div>
+
+    <!-- This is the JavaScript that makes the button work -->
+    <script>
+        const button = document.getElementById('action-btn');
+        const message = document.getElementById('secret-message');
+
+        button.addEventListener('click', function() {
+            // This shows the hidden text when the button is clicked
+            message.style.display = 'block';
+            button.innerText = 'Shared Successfully!';
+            button.style.backgroundColor = '#27ae60';
+        });
+    </script>
+
+</body>
+</html>
+
